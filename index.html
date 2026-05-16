@@ -541,6 +541,7 @@
         background: rgba(13, 5, 5, 0.97);
         backdrop-filter: blur(20px);
         border-bottom: 1px solid rgba(214, 40, 40, 0.2);
+        overflow: visible;
       }
       nav.scrolled {
         padding: 0.7rem 2.5rem;
@@ -551,13 +552,16 @@
         align-items: center;
         gap: 0.8rem;
         cursor: pointer;
+        overflow: visible;
+        flex-shrink: 0;
       }
       .nav-logo-img {
-        width: 48px;
-        height: 48px;
+        width: auto;
+        height: 54px;
+        max-height: 58px;
         object-fit: contain;
         flex-shrink: 0;
-        border-radius: 50%;
+        display: block;
       }
       .nav-mark {
         width: 44px;
@@ -2678,31 +2682,17 @@
         align-items: center;
         gap: 0.8rem;
         margin-bottom: 1rem;
+        overflow: visible;
       }
-      .fb-mark {
-        width: 42px;
-        height: 42px;
-        background: var(--r1);
-        clip-path: polygon(
-          50% 0%,
-          100% 25%,
-          100% 75%,
-          50% 100%,
-          0% 75%,
-          0% 25%
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 1rem;
-        color: #fff;
+      .footer-brand .fb-logo .nav-logo-img {
+        height: 54px;
+        max-height: 58px;
       }
-      .fb-name {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 1.5rem;
-        color: #fff;
-        letter-spacing: 0.08em;
+      .footer-brand .fb-logo .nav-name h1 {
+        color: var(--r1);
+      }
+      .footer-brand .fb-logo .nav-name p {
+        color: #111;
       }
       .footer-brand p {
         color: rgba(255, 255, 255, 0.38);
@@ -2984,7 +2974,14 @@
             <div class="wm-form-row">
               <div class="fg">
                 <label>Course</label>
-                <select id="wm-course"></select>
+                <select id="wm-course" onchange="toggleOtherCourse('wm')"></select>
+                <div class="country-other-wrap" id="wm-course-other-wrap">
+                  <input
+                    type="text"
+                    id="wm-course-other"
+                    placeholder="Enter your course"
+                  />
+                </div>
               </div>
               <div class="fg">
                 <label>City</label>
@@ -3125,23 +3122,23 @@
       </div>
       <ul class="nav-links" id="mainNavLinks">
         <li>
-          <a href="#home" class="active" id="nl-home" data-nav="home">Home</a>
+          <a href="#" class="active" id="nl-home" data-nav="home">Home</a>
         </li>
         <li>
-          <a href="#destinations" id="nl-dest" data-nav="destinations"
+          <a href="#" id="nl-dest" data-nav="destinations"
             >Destinations</a
           >
         </li>
         <li>
-          <a href="#why" id="nl-why" data-nav="why">Why Us</a>
+          <a href="#" id="nl-why" data-nav="why">Why Us</a>
         </li>
         <li>
-          <a href="#process" id="nl-admissions" data-nav="admissions"
+          <a href="#" id="nl-admissions" data-nav="admissions"
             >Admissions</a
           >
         </li>
         <li>
-          <a href="#contact" id="nl-contact" data-nav="contact">Contact</a>
+          <a href="#" id="nl-contact" data-nav="contact">Contact</a>
         </li>
       </ul>
       <div class="nav-right">
@@ -3158,7 +3155,7 @@
     </nav>
     </header>
     <div class="mob-menu" id="mobMenu">
-      <a href="#home" data-nav="home">Home</a>
+      <a href="#" data-nav="home">Home</a>
       <a href="#countries" onclick="showPage('countries'); closeMob(); return false;">Countries</a>
       <a href="#destinations" data-nav="destinations">Destinations</a>
       <a href="#why" data-nav="why">Why Us</a>
@@ -3307,7 +3304,7 @@
                   <h4>Affordable Fee Structure</h4>
                   <p>
                     Medical education programs starting from ₹2.5 Lakhs per
-                    annum up to ₹15 Lakhs per annum based on the university and
+                    annum up / ₹15 Lakhs Total Course based on the university and
                     country selected.
                   </p>
                 </div>
@@ -3407,9 +3404,9 @@
       <section class="section dark-bg rv" id="why">
         <div class="section-inner">
           <div class="sec-eyebrow">Our Promise</div>
-          <div class="sec-title">Why Tamil Nadu Trusts<br />Medical Dreams</div>
+          <div class="sec-title">Why Tamil Nadu Trusts<br />Medico Dreams</div>
           <div class="sec-rule"></div>
-          <div class="why-auth-badge">Authorized by Medico Dreams</div>
+          <!-- <div class="why-auth-badge">Authorized by Medico Dreams</div> -->
           <div class="why-carousel-wrap">
           <div class="why-grid">
             <div class="why-card">
@@ -3780,7 +3777,14 @@
             </div>
             <div class="fg">
               <label>Interested Course</label>
-              <select id="cf-course"></select>
+              <select id="cf-course" onchange="toggleOtherCourse('cf')"></select>
+              <div class="country-other-wrap" id="cf-course-other-wrap">
+                <input
+                  type="text"
+                  id="cf-course-other"
+                  placeholder="Enter your preferred course"
+                />
+              </div>
             </div>
             <div class="fg">
               <label>Preferred Country</label>
@@ -3856,12 +3860,13 @@
             <div class="fb-logo">
               <img
                 class="nav-logo-img"
-                src="images/Medical_Dreams_logo_V1.jpg"
+                src="images/logo.png"
                 alt="Medico Dreams logo"
-                style="width: 42px; height: 42px"
               />
-              <div class="fb-mark">M+</div>
-              <div class="fb-name">Medico Dreams</div>
+              <div class="nav-name">
+                <h1>Medico Dreams</h1>
+                <p>Future Doctors</p>
+              </div>
             </div>
             <p>
               A dedicated overseas medical education consultancy helping
@@ -3888,7 +3893,7 @@
             <h4>Quick Links</h4>
             <ul>
               <li>
-                <a href="#home" onclick="return navGo('home')"
+                <a href="#" data-nav="home"
                   ><i class="fa-solid fa-chevron-right"></i> Home</a
                 >
               </li>
@@ -3898,23 +3903,23 @@
                 >
               </li>
               <li>
-                <a href="#destinations" onclick="return navGo('destinations')"
+                <a href="#" data-nav="destinations"
                   ><i class="fa-solid fa-chevron-right"></i> Destinations</a
                 >
               </li>
               <li>
-                <a href="#why" onclick="return navGo('why')"
+                <a href="#" data-nav="why"
                   ><i class="fa-solid fa-chevron-right"></i> Why Choose Us</a
                 >
               </li>
               <li>
-                <a href="#process" onclick="return navGo('admissions')"
+                <a href="#" data-nav="admissions"
                   ><i class="fa-solid fa-chevron-right"></i> Admission
                   Process</a
                 >
               </li>
               <li>
-                <a href="#contact" onclick="return navGo('contact')"
+                <a href="#" data-nav="contact"
                   ><i class="fa-solid fa-chevron-right"></i> Contact Us</a
                 >
               </li>
@@ -5322,10 +5327,6 @@
         "Nursing Abroad",
         "MD / PG Medical",
         "BDS Abroad",
-        "Law",
-        "Engineering",
-        "Arts & Science",
-        "Music",
         "Non-medical",
         "Not Sure — Need Guidance",
       ];
@@ -5356,8 +5357,34 @@
         const html = COURSE_OPTIONS.map((c) => `<option>${c}</option>`).join("");
         ["cf-course", "wm-course"].forEach((id) => {
           const el = document.getElementById(id);
-          if (el) el.innerHTML = html;
+          if (el) {
+            el.innerHTML = html;
+            el.onchange = () => toggleOtherCourse(id.replace("-course", ""));
+          }
         });
+      }
+
+      function toggleOtherCourse(prefix) {
+        const select = document.getElementById(prefix + "-course");
+        const wrap = document.getElementById(prefix + "-course-other-wrap");
+        if (!select || !wrap) return;
+        const isNonMedical = select.value === "Non-medical";
+        wrap.classList.toggle("show", isNonMedical);
+        if (!isNonMedical) {
+          const other = document.getElementById(prefix + "-course-other");
+          if (other) other.value = "";
+        }
+      }
+
+      function getSelectedCourse(prefix) {
+        const select = document.getElementById(prefix + "-course");
+        if (!select) return "";
+        if (select.value === "Non-medical") {
+          const other = document.getElementById(prefix + "-course-other");
+          const custom = (other?.value || "").trim();
+          return custom ? "Non-medical: " + custom : "Non-medical (not specified)";
+        }
+        return select.value;
       }
 
       function toggleOtherCity(prefix) {
@@ -5497,10 +5524,13 @@
         const scrollToTop = options.scrollToTop !== false;
         const pageEl = document.getElementById("page-" + page);
         if (!pageEl) return false;
-        document
-          .querySelectorAll(".page")
-          .forEach((p) => p.classList.remove("active"));
-        pageEl.classList.add("active");
+        const alreadyActive = pageEl.classList.contains("active");
+        if (!alreadyActive) {
+          document
+            .querySelectorAll(".page")
+            .forEach((p) => p.classList.remove("active"));
+          pageEl.classList.add("active");
+        }
         const footer = document.getElementById("mainFooter");
         if (footer) footer.style.display = "block";
         if (scrollToTop) {
@@ -5548,9 +5578,18 @@
       function scrollToSection(selector) {
         const el = document.querySelector(selector);
         if (!el) return;
-        const y =
-          el.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
-        window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+        syncHeaderHeight();
+        /* offsetTop is reliable; getBoundingClientRect is wrong while a parent is display:none */
+        let top = 0;
+        let node = el;
+        while (node) {
+          top += node.offsetTop || 0;
+          node = node.offsetParent;
+        }
+        window.scrollTo({
+          top: Math.max(0, top - getHeaderOffset()),
+          behavior: "smooth",
+        });
       }
 
       function navGo(navKey) {
@@ -5566,12 +5605,14 @@
         if (!target) return false;
 
         const wasOnHome = isHomePageActive();
-        showPage("home", { scrollToTop: false });
+        if (!wasOnHome) {
+          showPage("home", { scrollToTop: false });
+        }
         setNavActive(navKey);
 
         const runScroll = () => scrollToSection(target);
         if (wasOnHome) {
-          runScroll();
+          requestAnimationFrame(runScroll);
         } else {
           requestAnimationFrame(() => {
             requestAnimationFrame(runScroll);
@@ -5622,20 +5663,11 @@
       }
 
       function initNavigation() {
-        document.getElementById("mainNavLinks")?.addEventListener("click", (e) => {
+        document.addEventListener("click", (e) => {
           const link = e.target.closest("a[data-nav]");
           if (!link) return;
           e.preventDefault();
           navGo(link.getAttribute("data-nav"));
-        });
-        document.querySelectorAll(".mob-menu a[data-nav]").forEach((a) => {
-          a.addEventListener("click", (e) => {
-            e.preventDefault();
-            const key = a.getAttribute("data-nav");
-            if (key) navGo(key);
-            else if (a.classList.contains("mob-cta")) openCounseling();
-            closeMob();
-          });
         });
         initNavScrollSpy();
       }
@@ -6035,7 +6067,7 @@
           name: document.getElementById("cf-name")?.value || "",
           phone: document.getElementById("cf-phone")?.value || "",
           city: getSelectedCity("cf"),
-          course: document.getElementById("cf-course")?.value || "",
+          course: getSelectedCourse("cf"),
           preferredCountry: getSelectedCountry("cf"),
           message: document.getElementById("cf-msg")?.value || "",
           neet: document.getElementById("cf-neet")?.value || "",
@@ -6057,6 +6089,13 @@
           !document.getElementById("cf-city-other")?.value.trim()
         ) {
           showToast("Please enter your city.", "err");
+          return;
+        }
+        if (
+          document.getElementById("cf-course")?.value === "Non-medical" &&
+          !document.getElementById("cf-course-other")?.value.trim()
+        ) {
+          showToast("Please enter your course.", "err");
           return;
         }
 
@@ -6081,6 +6120,7 @@
           document.getElementById("cf-neet").value = "";
           toggleOtherCountry("cf");
           toggleOtherCity("cf");
+          toggleOtherCourse("cf");
         } finally {
           formSubmitting = false;
           if (btn) {
@@ -6097,7 +6137,7 @@
           name: document.getElementById("wm-name")?.value || "",
           phone: document.getElementById("wm-phone")?.value || "",
           city: getSelectedCity("wm"),
-          course: document.getElementById("wm-course")?.value || "",
+          course: getSelectedCourse("wm"),
           preferredCountry: getSelectedCountry("wm"),
           message: "Welcome modal counseling request",
         };
@@ -6120,6 +6160,13 @@
           showToast("Please enter your city.", "err");
           return;
         }
+        if (
+          document.getElementById("wm-course")?.value === "Non-medical" &&
+          !document.getElementById("wm-course-other")?.value.trim()
+        ) {
+          showToast("Please enter your course.", "err");
+          return;
+        }
 
         formSubmitting = true;
         const prevHtml = btn?.innerHTML;
@@ -6139,6 +6186,7 @@
           document.getElementById("wm-phone").value = "";
           toggleOtherCountry("wm");
           toggleOtherCity("wm");
+          toggleOtherCourse("wm");
         } finally {
           formSubmitting = false;
           if (btn) {
