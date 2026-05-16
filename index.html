@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medico Dreams | Future Doctors — Global MBBS Consultancy</title>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
       rel="stylesheet"
@@ -74,406 +74,412 @@
       /* ============================================================
          WELCOME MODAL — Fully Responsive
       ============================================================ */
-.welcome-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 2, 2, 0.75);
-  backdrop-filter: blur(8px);
-  z-index: 9999;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  opacity: 1;
-  pointer-events: none;
-}
-.welcome-overlay.is-open {
-  display: flex;
-  pointer-events: auto;
-}
+      .welcome-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 2, 2, 0.75);
+        backdrop-filter: blur(8px);
+        z-index: 9999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        opacity: 1;
+        pointer-events: none;
+      }
+      .welcome-overlay.is-open {
+        display: flex;
+        pointer-events: auto;
+      }
 
-@keyframes fadeOverlay {
-  to { opacity: 1; }
-}
+      @keyframes fadeOverlay {
+        to {
+          opacity: 1;
+        }
+      }
 
-.welcome-modal {
-  background: #fff;
-  border-radius: 24px;
-  overflow: hidden;
-  max-width: 520px;
-  width: 100%;
-  max-height: min(92vh, 920px);
-  margin: auto;
-  box-shadow: 0 40px 100px rgba(214, 40, 40, 0.25);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
+      .welcome-modal {
+        background: #fff;
+        border-radius: 24px;
+        overflow: hidden;
+        max-width: 520px;
+        width: 100%;
+        max-height: min(92vh, 920px);
+        margin: auto;
+        box-shadow: 0 40px 100px rgba(214, 40, 40, 0.25);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+      }
 
-/* Top Section */
-.wm-top {
-  background: linear-gradient(135deg, var(--dark2), var(--dark3));
-  padding: 2rem 1.8rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
+      /* Top Section */
+      .wm-top {
+        background: linear-gradient(135deg, var(--dark2), var(--dark3));
+        padding: 2rem 1.8rem 1.5rem;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
 
-.wm-top::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 80% 20%, rgba(214, 40, 40, 0.35), transparent 60%);
-}
+      .wm-top::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 80% 20%,
+          rgba(214, 40, 40, 0.35),
+          transparent 60%
+        );
+      }
 
-.wm-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(214, 40, 40, 0.2);
-  border: 1px solid rgba(214, 40, 40, 0.4);
-  color: var(--r2);
-  padding: 0.35rem 0.9rem;
-  border-radius: 50px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 1;
-}
+      .wm-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(214, 40, 40, 0.2);
+        border: 1px solid rgba(214, 40, 40, 0.4);
+        color: var(--r2);
+        padding: 0.35rem 0.9rem;
+        border-radius: 50px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 1;
+      }
 
-.wm-title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2.25rem;
-  color: #fff;
-  letter-spacing: 0.06em;
-  line-height: 1.1;
-  position: relative;
-  z-index: 1;
-}
+      .wm-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.25rem;
+        color: #fff;
+        letter-spacing: 0.06em;
+        line-height: 1.1;
+        position: relative;
+        z-index: 1;
+      }
 
-.wm-title span {
-  color: var(--r2);
-}
+      .wm-title span {
+        color: var(--r2);
+      }
 
-.wm-sub {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.87rem;
-  margin-top: 0.6rem;
-  line-height: 1.5;
-  position: relative;
-  z-index: 1;
-}
+      .wm-sub {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.87rem;
+        margin-top: 0.6rem;
+        line-height: 1.5;
+        position: relative;
+        z-index: 1;
+      }
 
-.wm-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 36px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  transition: all 0.2s;
-  z-index: 2;
-}
+      .wm-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        transition: all 0.2s;
+        z-index: 2;
+      }
 
-.wm-close:hover {
-  background: rgba(214, 40, 40, 0.4);
-}
+      .wm-close:hover {
+        background: rgba(214, 40, 40, 0.4);
+      }
 
-/* Body */
-.wm-body {
-  padding: 1.8rem;
-  overflow-y: auto;
-  flex: 1;
-  min-height: 0;
-}
+      /* Body */
+      .wm-body {
+        padding: 1.8rem;
+        overflow-y: auto;
+        flex: 1;
+        min-height: 0;
+      }
 
-.wm-points {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  margin-bottom: 1.6rem;
-}
+      .wm-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin-bottom: 1.6rem;
+      }
 
-.wm-point {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.84rem;
-  color: var(--text2);
-  font-weight: 500;
-}
+      .wm-point {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.84rem;
+        color: var(--text2);
+        font-weight: 500;
+      }
 
-.wm-point i {
-  color: var(--r1);
-  font-size: 0.8rem;
-  flex-shrink: 0;
-}
+      .wm-point i {
+        color: var(--r1);
+        font-size: 0.8rem;
+        flex-shrink: 0;
+      }
 
-/* Form */
-.wm-form .fg {
-  margin-bottom: 0.9rem;
-}
+      /* Form */
+      .wm-form .fg {
+        margin-bottom: 0.9rem;
+      }
 
-.wm-form label {
-  display: block;
-  font-size: 0.73rem;
-  font-weight: 700;
-  color: var(--text2);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 0.4rem;
-}
+      .wm-form label {
+        display: block;
+        font-size: 0.73rem;
+        font-weight: 700;
+        color: var(--text2);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 0.4rem;
+      }
 
-.wm-form input,
-.wm-form select {
-  width: 100%;
-  border: 1.5px solid rgba(214, 40, 40, 0.2);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  font-family: "Manrope", sans-serif;
-  font-size: 0.9rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.2s;
-  background: #fff;
-}
+      .wm-form input,
+      .wm-form select {
+        width: 100%;
+        border: 1.5px solid rgba(214, 40, 40, 0.2);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        font-family: "Manrope", sans-serif;
+        font-size: 0.9rem;
+        color: var(--text);
+        outline: none;
+        transition: border-color 0.2s;
+        background: #fff;
+      }
 
-.wm-form input:focus,
-.wm-form select:focus {
-  border-color: var(--r1);
-}
+      .wm-form input:focus,
+      .wm-form select:focus {
+        border-color: var(--r1);
+      }
 
-.wm-form .country-other-wrap {
-  margin-top: 0.5rem;
-}
+      .wm-form .country-other-wrap {
+        margin-top: 0.5rem;
+      }
 
-.wm-form .country-other-wrap input {
-  width: 100%;
-  border: 1.5px solid rgba(214, 40, 40, 0.2);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  font-family: "Manrope", sans-serif;
-  font-size: 0.9rem;
-  color: var(--text);
-  background: #fff;
-}
+      .wm-form .country-other-wrap input {
+        width: 100%;
+        border: 1.5px solid rgba(214, 40, 40, 0.2);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        font-family: "Manrope", sans-serif;
+        font-size: 0.9rem;
+        color: var(--text);
+        background: #fff;
+      }
 
-.wm-form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-}
+      .wm-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
 
-.wm-btn {
-  width: 100%;
-  background: linear-gradient(135deg, var(--r1), var(--r2));
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 0.95rem;
-  font-family: "Manrope", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 800;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.1rem;
-  transition: all 0.3s;
-  letter-spacing: 0.02em;
-}
+      .wm-btn {
+        width: 100%;
+        background: linear-gradient(135deg, var(--r1), var(--r2));
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 0.95rem;
+        font-family: "Manrope", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 800;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.1rem;
+        transition: all 0.3s;
+        letter-spacing: 0.02em;
+      }
 
-.wm-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(214, 40, 40, 0.4);
-}
+      .wm-btn:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(214, 40, 40, 0.4);
+      }
 
-.wm-btn:disabled,
-.form-submit:disabled {
-  opacity: 0.75;
-  cursor: not-allowed;
-  transform: none;
-}
+      .wm-btn:disabled,
+      .form-submit:disabled {
+        opacity: 0.75;
+        cursor: not-allowed;
+        transform: none;
+      }
 
-.country-other-wrap {
-  display: none;
-  margin-top: 0.5rem;
-}
+      .country-other-wrap {
+        display: none;
+        margin-top: 0.5rem;
+      }
 
-.country-other-wrap.show {
-  display: block;
-}
+      .country-other-wrap.show {
+        display: block;
+      }
 
-.country-other-wrap input {
-  width: 100%;
-}
+      .country-other-wrap input {
+        width: 100%;
+      }
 
-.whatsapp-fab {
-  position: fixed;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7rem;
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
-  z-index: 400;
-  text-decoration: none;
-}
+      .whatsapp-fab {
+        position: fixed;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.7rem;
+        box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+        z-index: 400;
+        text-decoration: none;
+      }
 
-.counseling-float {
-  position: fixed;
-  top: 7.5rem;
-  right: 1rem;
-  z-index: 399;
-  background: linear-gradient(135deg, var(--r1), var(--r2));
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 0.65rem 1rem;
-  font-size: 0.75rem;
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: 0 10px 28px rgba(214, 40, 40, 0.35);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  letter-spacing: 0.04em;
-  max-width: 160px;
-  text-align: left;
-  line-height: 1.3;
-}
+      .counseling-float {
+        position: fixed;
+        top: 7.5rem;
+        right: 1rem;
+        z-index: 399;
+        background: linear-gradient(135deg, var(--r1), var(--r2));
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 0.65rem 1rem;
+        font-size: 0.75rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 10px 28px rgba(214, 40, 40, 0.35);
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        letter-spacing: 0.04em;
+        max-width: 160px;
+        text-align: left;
+        line-height: 1.3;
+      }
 
-.seat-btn {
-  width: 100%;
-  margin-top: 0.75rem;
-  background: transparent;
-  border: 1.5px solid rgba(214, 40, 40, 0.45);
-  color: #fff;
-  padding: 0.9rem;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.12em;
-  cursor: pointer;
-  border-radius: 999px;
-}
+      .seat-btn {
+        width: 100%;
+        margin-top: 0.75rem;
+        background: transparent;
+        border: 1.5px solid rgba(214, 40, 40, 0.45);
+        color: #fff;
+        padding: 0.9rem;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+        cursor: pointer;
+        border-radius: 999px;
+      }
 
-.fee-disclaimer {
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.35);
-  margin-top: 0.75rem;
-  text-align: center;
-}
+      .fee-disclaimer {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 0.75rem;
+        text-align: center;
+      }
 
-.wm-skip {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.78rem;
-  color: #aaa;
-  cursor: pointer;
-  transition: color 0.2s;
-}
+      .wm-skip {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.78rem;
+        color: #aaa;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
 
-.wm-skip:hover {
-  color: var(--r1);
-}
+      .wm-skip:hover {
+        color: var(--r1);
+      }
 
-/* ===================== RESPONSIVE ===================== */
+      /* ===================== RESPONSIVE ===================== */
 
-@media (max-width: 768px) {
-  .welcome-overlay {
-    padding: 0.75rem;
-    align-items: flex-start;
-  }
+      @media (max-width: 768px) {
+        .welcome-overlay {
+          padding: 0.75rem;
+          align-items: flex-start;
+        }
 
-  .welcome-modal {
-    max-height: calc(100vh - 1.5rem);
-    border-radius: 20px;
-  }
+        .welcome-modal {
+          max-height: calc(100vh - 1.5rem);
+          border-radius: 20px;
+        }
 
-  .wm-form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+        .wm-form-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
 
-  .wm-points {
-    grid-template-columns: 1fr;
-  }
-}
+        .wm-points {
+          grid-template-columns: 1fr;
+        }
+      }
 
-@media (max-width: 480px) {
-  .welcome-modal {
-    border-radius: 20px;
-    margin: 0.5rem;
-  }
+      @media (max-width: 480px) {
+        .welcome-modal {
+          border-radius: 20px;
+          margin: 0.5rem;
+        }
 
-  .wm-top {
-    padding: 1.6rem 1.4rem 1.2rem;
-  }
+        .wm-top {
+          padding: 1.6rem 1.4rem 1.2rem;
+        }
 
-  .wm-title {
-    font-size: 1.55rem;
-  }
+        .wm-title {
+          font-size: 1.55rem;
+        }
 
-  .wm-body {
-    padding: 1.25rem;
-  }
+        .wm-body {
+          padding: 1.25rem;
+        }
 
-  .wm-points {
-    gap: 0.7rem;
-  }
+        .wm-points {
+          gap: 0.7rem;
+        }
 
-  .wm-point {
-    font-size: 0.8rem;
-  }
+        .wm-point {
+          font-size: 0.8rem;
+        }
 
-  .wm-form input,
-  .wm-form select {
-    padding: 0.7rem 0.9rem;
-    font-size: 0.88rem;
-  }
+        .wm-form input,
+        .wm-form select {
+          padding: 0.7rem 0.9rem;
+          font-size: 0.88rem;
+        }
 
-  .wm-btn {
-    padding: 0.9rem;
-    font-size: 0.93rem;
-  }
-}
+        .wm-btn {
+          padding: 0.9rem;
+          font-size: 0.93rem;
+        }
+      }
 
-@media (max-width: 360px) {
-  .wm-title {
-    font-size: 1.8rem;
-  }
+      @media (max-width: 360px) {
+        .wm-title {
+          font-size: 1.8rem;
+        }
 
-  .wm-form-row {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-  }
+        .wm-form-row {
+          grid-template-columns: 1fr;
+          gap: 0.6rem;
+        }
 
-  .wm-points {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
-  }
-}
+        .wm-points {
+          grid-template-columns: 1fr;
+          gap: 0.6rem;
+        }
+      }
 
       /* ============================================================
          SITE HEADER (top bar + main nav, no gap)
@@ -2968,13 +2974,20 @@
               </div>
               <div class="fg">
                 <label>Mobile</label
-                ><input type="tel" id="wm-phone" placeholder="+91 XXXXX XXXXX" />
+                ><input
+                  type="tel"
+                  id="wm-phone"
+                  placeholder="+91 XXXXX XXXXX"
+                />
               </div>
             </div>
             <div class="wm-form-row">
               <div class="fg">
                 <label>Course</label>
-                <select id="wm-course" onchange="toggleOtherCourse('wm')"></select>
+                <select
+                  id="wm-course"
+                  onchange="toggleOtherCourse('wm')"
+                ></select>
                 <div class="country-other-wrap" id="wm-course-other-wrap">
                   <input
                     type="text"
@@ -2997,7 +3010,10 @@
             </div>
             <div class="fg">
               <label>Preferred Country</label>
-              <select id="wm-country" onchange="toggleOtherCountry('wm')"></select>
+              <select
+                id="wm-country"
+                onchange="toggleOtherCountry('wm')"
+              ></select>
               <div class="country-other-wrap" id="wm-country-other-wrap">
                 <input
                   type="text"
@@ -3065,15 +3081,24 @@
             <strong>Interested in studying here?</strong> Get a free
             personalised plan.
           </div>
-          <div style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-end">
-          <button
-            class="btn-fire"
-            onclick="openCounseling()"
-            style="font-size: 0.78rem; padding: 0.7rem 1.5rem"
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              align-items: flex-end;
+            "
           >
-            <i class="fa-solid fa-calendar-check"></i> Free Counseling
-          </button>
-          <button type="button" class="seat-btn" onclick="openCounseling()">Confirm Seat</button>
+            <button
+              class="btn-fire"
+              onclick="openCounseling()"
+              style="font-size: 0.78rem; padding: 0.7rem 1.5rem"
+            >
+              <i class="fa-solid fa-calendar-check"></i> Free Counseling
+            </button>
+            <button type="button" class="seat-btn" onclick="openCounseling()">
+              Confirm Seat
+            </button>
           </div>
         </div>
       </div>
@@ -3083,85 +3108,157 @@
      NAVIGATION
 ============================================================ -->
     <header class="site-header" id="siteHeader">
-    <div class="top-bar">
-      <div class="top-bar-phones">
-        <a href="https://wa.me/919500979888" target="_blank" rel="noopener"
-          ><i class="fa-brands fa-whatsapp"></i> +91 95009 79888</a
-        >
-        <a href="tel:+919629009888"><i class="fa-solid fa-phone"></i> +91 96290 09888</a>
-        <a href="tel:+914652282878"><i class="fa-solid fa-phone"></i> 04652 282878</a>
+      <div class="top-bar">
+        <div class="top-bar-phones">
+          <a href="https://wa.me/919500979888" target="_blank" rel="noopener"
+            ><i class="fa-brands fa-whatsapp"></i> +91 95009 79888</a
+          >
+          <a href="tel:+919629009888"
+            ><i class="fa-solid fa-phone"></i> +91 96290 09888</a
+          >
+          <a href="tel:+914652282878"
+            ><i class="fa-solid fa-phone"></i> 04652 282878</a
+          >
+        </div>
+        <div class="top-bar-social">
+          <a
+            href="https://wa.me/919500979888"
+            target="_blank"
+            rel="noopener"
+            aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="mailto:Medicodreams888@gmail.com" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
       </div>
-      <div class="top-bar-social">
-        <a href="https://wa.me/919500979888" target="_blank" rel="noopener" aria-label="WhatsApp"
-          ><i class="fa-brands fa-whatsapp"></i
-        ></a>
-        <a href="mailto:Medicodreams888@gmail.com" aria-label="Email"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"
-          ><i class="fa-brands fa-facebook-f"></i
-        ></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-    </div>
 
-    <nav id="mainNav">
-      <div class="nav-logo" onclick="navGo('home')" role="button" tabindex="0" aria-label="Go to home">
-        <img
-          class="nav-logo-img"
-          src="images/logo.png"
-          alt="Medico Dreams logo"
-        />
-        <div class="nav-mark">M+</div>
-        <div class="nav-name">
-          <h1>Medico Dreams</h1>
-          <p>Future Doctors</p>
+      <nav id="mainNav">
+        <div
+          class="nav-logo"
+          onclick="navGo('home')"
+          role="button"
+          tabindex="0"
+          aria-label="Go to home"
+        >
+          <img
+            class="nav-logo-img"
+            src="images/logo.png"
+            alt="Medico Dreams logo"
+          />
+          <div class="nav-mark">M+</div>
+          <div class="nav-name">
+            <h1>Medico Dreams</h1>
+            <p>Future Doctors</p>
+          </div>
         </div>
-      </div>
-      <ul class="nav-links" id="mainNavLinks">
-        <li>
-          <a href="#" class="active" id="nl-home" data-nav="home">Home</a>
-        </li>
-        <li>
-          <a href="#" id="nl-dest" data-nav="destinations"
-            >Destinations</a
-          >
-        </li>
-        <li>
-          <a href="#" id="nl-why" data-nav="why">Why Us</a>
-        </li>
-        <li>
-          <a href="#" id="nl-admissions" data-nav="admissions"
-            >Admissions</a
-          >
-        </li>
-        <li>
-          <a href="#" id="nl-contact" data-nav="contact">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-right">
-        <div class="nav-phone">
-          <i class="fa-solid fa-phone"></i> +919500979888
+        <ul class="nav-links" id="mainNavLinks">
+          <li>
+            <a
+              href="#home"
+              class="active"
+              id="nl-home"
+              data-nav="home"
+              onclick="return navGo('home')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#destinations"
+              id="nl-dest"
+              data-nav="destinations"
+              onclick="return navGo('destinations')"
+              >Destinations</a
+            >
+          </li>
+          <li>
+            <a
+              href="#why"
+              id="nl-why"
+              data-nav="why"
+              onclick="return navGo('why')"
+              >Why Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#process"
+              id="nl-admissions"
+              data-nav="admissions"
+              onclick="return navGo('admissions')"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              id="nl-contact"
+              data-nav="contact"
+              onclick="return navGo('contact')"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-right">
+          <div class="nav-phone">
+            <i class="fa-solid fa-phone"></i> +919500979888
+          </div>
+          <button class="nav-cta" onclick="openCounseling()">
+            Free Counseling
+          </button>
         </div>
-        <button class="nav-cta" onclick="openCounseling()">
-          Free Counseling
+        <button class="ham-btn" id="hamBtn">
+          <span></span><span></span><span></span>
         </button>
-      </div>
-      <button class="ham-btn" id="hamBtn">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+      </nav>
     </header>
     <div class="mob-menu" id="mobMenu">
-      <a href="#" data-nav="home">Home</a>
-      <a href="#countries" onclick="showPage('countries'); closeMob(); return false;">Countries</a>
-      <a href="#destinations" data-nav="destinations">Destinations</a>
-      <a href="#why" data-nav="why">Why Us</a>
-      <a href="#process" data-nav="admissions">Admissions</a>
-      <a href="#contact" data-nav="contact">Contact</a>
-      <a href="#" class="mob-cta" onclick="openCounseling(); closeMob(); return false;">Free Counseling</a>
+      <a href="#home" data-nav="home" onclick="return navGo('home')">Home</a>
+      <a
+        href="#countries"
+        onclick="
+          showPage('countries');
+          closeMob();
+          return false;
+        "
+        >Countries</a
+      >
+      <a href="#destinations" data-nav="destinations" onclick="return navGo('destinations')"
+        >Destinations</a
+      >
+      <a href="#why" data-nav="why" onclick="return navGo('why')">Why Us</a>
+      <a href="#process" data-nav="admissions" onclick="return navGo('admissions')"
+        >Admissions</a
+      >
+      <a href="#contact" data-nav="contact" onclick="return navGo('contact')"
+        >Contact</a
+      >
+      <a
+        href="#"
+        class="mob-cta"
+        onclick="
+          openCounseling();
+          closeMob();
+          return false;
+        "
+        >Free Counseling</a
+      >
     </div>
 
     <!-- ============================================================
@@ -3195,7 +3292,10 @@
               <button class="btn-fire" onclick="openCounseling()">
                 <i class="fa-solid fa-paper-plane"></i> Book Free Counseling
               </button>
-              <a class="btn-ghost" href="#" onclick="return showPage('countries')"
+              <a
+                class="btn-ghost"
+                href="#"
+                onclick="return showPage('countries');"
                 ><i class="fa-solid fa-globe"></i> All Countries</a
               >
             </div>
@@ -3242,7 +3342,7 @@
                 style="display: none"
               ></div>
             </div>
-            <div class="hcard-cta" onclick="return showPage('countries')">
+            <div class="hcard-cta" onclick="return showPage('countries');">
               Explore All 20+ Destinations →
             </div>
           </div>
@@ -3304,8 +3404,8 @@
                   <h4>Affordable Fee Structure</h4>
                   <p>
                     Medical education programs starting from ₹2.5 Lakhs per
-                    annum up / ₹15 Lakhs Total Course based on the university and
-                    country selected.
+                    annum up / ₹15 Lakhs Total Course based on the university
+                    and country selected.
                   </p>
                 </div>
               </div>
@@ -3349,7 +3449,10 @@
             <button
               class="btn-fire"
               style="width: 100%; justify-content: center; margin-top: 0.5rem"
-              onclick="navGo('contact'); return false;"
+              onclick="
+                navGo('contact');
+                return false;
+              "
             >
               <i class="fa-solid fa-calendar-check"></i> Book a Visit
             </button>
@@ -3389,13 +3492,17 @@
             <button
               class="dest-see-more-btn"
               type="button"
-              onclick="return showPage('countries')"
+              onclick="return showPage('countries');"
             >
               <i class="fa-solid fa-globe"></i> See More Countries
             </button>
           </div>
-          <p class="fee-disclaimer" style="color:var(--text2);margin-top:1.25rem">
-            *Fees shown are indicative. Final fees are confirmed during free counseling.
+          <p
+            class="fee-disclaimer"
+            style="color: var(--text2); margin-top: 1.25rem"
+          >
+            *Fees shown are indicative. Final fees are confirmed during free
+            counseling.
           </p>
         </div>
       </section>
@@ -3408,75 +3515,76 @@
           <div class="sec-rule"></div>
           <!-- <div class="why-auth-badge">Authorized by Medico Dreams</div> -->
           <div class="why-carousel-wrap">
-          <div class="why-grid">
-            <div class="why-card">
-              <div class="why-num">01</div>
-              <span class="why-icon">🏆</span>
-              <div class="why-title">100% NMC / MCI Approved</div>
-              <div class="why-text">
-                Every single university we recommend is officially recognized by
-                India's National Medical Commission. Your MBBS degree will be
-                valid for FMGE/NExT screening — guaranteed.
+            <div class="why-grid">
+              <div class="why-card">
+                <div class="why-num">01</div>
+                <span class="why-icon">🏆</span>
+                <div class="why-title">100% NMC / MCI Approved</div>
+                <div class="why-text">
+                  Every single university we recommend is officially recognized
+                  by India's National Medical Commission. Your MBBS degree will
+                  be valid for FMGE/NExT screening — guaranteed.
+                </div>
+                <span class="why-tag">Non-Negotiable</span>
               </div>
-              <span class="why-tag">Non-Negotiable</span>
-            </div>
-            <div class="why-card">
-              <div class="why-num">02</div>
-              <span class="why-icon">✈️</span>
-              <div class="why-title">True End-to-End Support</div>
-              <div class="why-text">
-                We handle everything: counseling → university shortlisting →
-                application → offer letter → visa documentation → embassy prep →
-                flight → hostel → arrival orientation. You focus on studying.
+              <div class="why-card">
+                <div class="why-num">02</div>
+                <span class="why-icon">✈️</span>
+                <div class="why-title">True End-to-End Support</div>
+                <div class="why-text">
+                  We handle everything: counseling → university shortlisting →
+                  application → offer letter → visa documentation → embassy prep
+                  → flight → hostel → arrival orientation. You focus on
+                  studying.
+                </div>
+                <span class="why-tag">Complete Package</span>
               </div>
-              <span class="why-tag">Complete Package</span>
-            </div>
-            <div class="why-card">
-              <div class="why-num">03</div>
-              <span class="why-icon">💸</span>
-              <div class="why-title">Zero Hidden Fees, Ever</div>
-              <div class="why-text">
-                Full fee transparency from the first meeting. Every cost is
-                disclosed upfront. No last-minute surprises. Scholarship
-                guidance available for eligible students based on NEET score.
+              <div class="why-card">
+                <div class="why-num">03</div>
+                <span class="why-icon">💸</span>
+                <div class="why-title">Zero Hidden Fees, Ever</div>
+                <div class="why-text">
+                  Full fee transparency from the first meeting. Every cost is
+                  disclosed upfront. No last-minute surprises. Scholarship
+                  guidance available for eligible students based on NEET score.
+                </div>
+                <span class="why-tag">100% Transparent</span>
               </div>
-              <span class="why-tag">100% Transparent</span>
-            </div>
-            <div class="why-card">
-              <div class="why-num">04</div>
-              <span class="why-icon">👨‍⚕️</span>
-              <div class="why-title">Dedicated Student Guidance</div>
-              <div class="why-text">
-                We are committed to helping aspiring medical students from Tamil
-                Nadu achieve their dream of studying abroad through trusted
-                guidance, university selection support, and complete admission
-                assistance.
+              <div class="why-card">
+                <div class="why-num">04</div>
+                <span class="why-icon">👨‍⚕️</span>
+                <div class="why-title">Dedicated Student Guidance</div>
+                <div class="why-text">
+                  We are committed to helping aspiring medical students from
+                  Tamil Nadu achieve their dream of studying abroad through
+                  trusted guidance, university selection support, and complete
+                  admission assistance.
+                </div>
+                <span class="why-tag">Student-Focused Support</span>
               </div>
-              <span class="why-tag">Student-Focused Support</span>
-            </div>
-            <div class="why-card">
-              <div class="why-num">05</div>
-              <span class="why-icon">🗣️</span>
-              <div class="why-title">Tamil-Speaking Counselors</div>
-              <div class="why-text">
-                Our counselors are Tamil-speaking. Parents can ask every
-                question in Tamil without worry. We believe informed parents
-                make the best decisions for their children's futures.
+              <div class="why-card">
+                <div class="why-num">05</div>
+                <span class="why-icon">🗣️</span>
+                <div class="why-title">Tamil-Speaking Counselors</div>
+                <div class="why-text">
+                  Our counselors are Tamil-speaking. Parents can ask every
+                  question in Tamil without worry. We believe informed parents
+                  make the best decisions for their children's futures.
+                </div>
+                <span class="why-tag">Your Language</span>
               </div>
-              <span class="why-tag">Your Language</span>
-            </div>
-            <div class="why-card">
-              <div class="why-num">06</div>
-              <span class="why-icon">📱</span>
-              <div class="why-title">24/7 Student Helpline</div>
-              <div class="why-text">
-                A dedicated helpline for every student abroad — for academic
-                questions, emergency support, FMGE coaching guidance, or just to
-                talk. We are always reachable. Always.
+              <div class="why-card">
+                <div class="why-num">06</div>
+                <span class="why-icon">📱</span>
+                <div class="why-title">24/7 Student Helpline</div>
+                <div class="why-text">
+                  A dedicated helpline for every student abroad — for academic
+                  questions, emergency support, FMGE coaching guidance, or just
+                  to talk. We are always reachable. Always.
+                </div>
+                <span class="why-tag">Always Available</span>
               </div>
-              <span class="why-tag">Always Available</span>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -3745,11 +3853,7 @@
             <div class="form-grid">
               <div class="fg">
                 <label>Full Name</label
-                ><input
-                  type="text"
-                  placeholder="Your full name"
-                  id="cf-name"
-                />
+                ><input type="text" placeholder="Your full name" id="cf-name" />
               </div>
               <div class="fg">
                 <label>Mobile / WhatsApp</label
@@ -3777,7 +3881,10 @@
             </div>
             <div class="fg">
               <label>Interested Course</label>
-              <select id="cf-course" onchange="toggleOtherCourse('cf')"></select>
+              <select
+                id="cf-course"
+                onchange="toggleOtherCourse('cf')"
+              ></select>
               <div class="country-other-wrap" id="cf-course-other-wrap">
                 <input
                   type="text"
@@ -3788,10 +3895,13 @@
             </div>
             <div class="fg">
               <label>Preferred Country</label>
-              <select id="cf-country" onchange="toggleOtherCountry('cf')"></select>
+              <select
+                id="cf-country"
+                onchange="toggleOtherCountry('cf')"
+              ></select>
               <div class="country-other-wrap" id="cf-country-other-wrap">
                 <input
-                  type="text"   
+                  type="text"
                   id="cf-country-other"
                   placeholder="Enter your preferred country"
                 />
@@ -5354,7 +5464,9 @@
       }
 
       function populateCourseDropdowns() {
-        const html = COURSE_OPTIONS.map((c) => `<option>${c}</option>`).join("");
+        const html = COURSE_OPTIONS.map((c) => `<option>${c}</option>`).join(
+          "",
+        );
         ["cf-course", "wm-course"].forEach((id) => {
           const el = document.getElementById(id);
           if (el) {
@@ -5382,7 +5494,9 @@
         if (select.value === "Non-medical") {
           const other = document.getElementById(prefix + "-course-other");
           const custom = (other?.value || "").trim();
-          return custom ? "Non-medical: " + custom : "Non-medical (not specified)";
+          return custom
+            ? "Non-medical: " + custom
+            : "Non-medical (not specified)";
         }
         return select.value;
       }
@@ -5463,6 +5577,17 @@
       enrichCountryLifeData();
 
       /* ===================== INIT ===================== */
+      function bootSite() {
+        syncHeaderHeight();
+        initNavigation();
+        window.addEventListener("resize", syncHeaderHeight);
+        const initialHash = window.location.hash.replace(/^#/, "");
+        const navKey = HASH_TO_NAV[initialHash];
+        if (navKey) {
+          navGo(navKey);
+        }
+      }
+
       window.addEventListener("load", () => {
         populateCountryDropdowns();
         populateCityDropdowns();
@@ -5475,19 +5600,6 @@
         buildFAQ();
         startClockUpdater();
         syncHeaderHeight();
-        initNavigation();
-        window.addEventListener("resize", syncHeaderHeight);
-        const hashNav = {
-          "#home": "home",
-          "#destinations": "destinations",
-          "#why": "why",
-          "#process": "admissions",
-          "#contact": "contact",
-        };
-        const initialHash = window.location.hash;
-        if (hashNav[initialHash]) {
-          navGo(hashNav[initialHash]);
-        }
         setTimeout(() => {
           if (!sessionStorage.getItem("wm_closed")) openCounseling();
         }, 1800);
@@ -5517,7 +5629,9 @@
       /* ===================== PAGE SYSTEM ===================== */
 
       function isHomePageActive() {
-        return document.getElementById("page-home")?.classList.contains("active");
+        return document
+          .getElementById("page-home")
+          ?.classList.contains("active");
       }
 
       function showPage(page, options = {}) {
@@ -5575,74 +5689,90 @@
         );
       }
 
-      function scrollToSection(selector) {
-        const el = document.querySelector(selector);
-        if (!el) return;
-        syncHeaderHeight();
-        /* offsetTop is reliable; getBoundingClientRect is wrong while a parent is display:none */
-        let top = 0;
-        let node = el;
-        while (node) {
-          top += node.offsetTop || 0;
-          node = node.offsetParent;
+      let suppressScrollSpy = false;
+
+      const NAV_SECTIONS = {
+        home: "home",
+        destinations: "destinations",
+        why: "why",
+        admissions: "process",
+        contact: "contact",
+      };
+
+      function ensureHomePageVisible() {
+        const pageHome = document.getElementById("page-home");
+        if (!pageHome) return;
+        if (!pageHome.classList.contains("active")) {
+          document
+            .querySelectorAll(".page")
+            .forEach((p) => p.classList.remove("active"));
+          pageHome.classList.add("active");
         }
-        window.scrollTo({
-          top: Math.max(0, top - getHeaderOffset()),
-          behavior: "smooth",
+      }
+
+      function scrollToSectionId(sectionId) {
+        ensureHomePageVisible();
+        syncHeaderHeight();
+        const el = document.getElementById(sectionId);
+        if (!el) return;
+        el.classList.add("in");
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
         });
       }
 
       function navGo(navKey) {
         closeMob();
-        const sectionMap = {
-          home: "#home",
-          destinations: "#destinations",
-          why: "#why",
-          admissions: "#process",
-          contact: "#contact",
-        };
-        const target = sectionMap[navKey];
-        if (!target) return false;
+        const sectionId = NAV_SECTIONS[navKey];
+        if (!sectionId) return false;
 
         const wasOnHome = isHomePageActive();
         if (!wasOnHome) {
           showPage("home", { scrollToTop: false });
         }
+
+        suppressScrollSpy = true;
         setNavActive(navKey);
 
-        const runScroll = () => scrollToSection(target);
+        const runScroll = () => scrollToSectionId(sectionId);
         if (wasOnHome) {
-          requestAnimationFrame(runScroll);
+          requestAnimationFrame(() => requestAnimationFrame(runScroll));
         } else {
-          requestAnimationFrame(() => {
-            requestAnimationFrame(runScroll);
-          });
+          setTimeout(runScroll, 280);
         }
 
+        setTimeout(() => {
+          suppressScrollSpy = false;
+        }, 1200);
+
         if (history.replaceState) {
-          history.replaceState(null, "", target);
+          history.replaceState(
+            null,
+            "",
+            window.location.pathname + window.location.search + "#" + sectionId,
+          );
         }
         return false;
       }
+      window.navGo = navGo;
 
       function initNavScrollSpy() {
-        const sections = [
-          { sel: "#home", key: "home" },
-          { sel: "#destinations", key: "destinations" },
-          { sel: "#why", key: "why" },
-          { sel: "#process", key: "admissions" },
-          { sel: "#contact", key: "contact" },
-        ];
+        const sections = Object.entries(NAV_SECTIONS).map(([key, id]) => ({
+          id,
+          key,
+        }));
         let ticking = false;
         function updateActiveOnScroll() {
-          if (!isHomePageActive()) {
+          if (suppressScrollSpy || !isHomePageActive()) {
             ticking = false;
             return;
           }
-          const offset = getHeaderOffset() + 48;
+          const offset = getHeaderOffset() + 80;
           let current = "home";
           sections.forEach((item) => {
-            const el = document.querySelector(item.sel);
+            const el = document.getElementById(item.id);
             if (el && el.getBoundingClientRect().top <= offset) {
               current = item.key;
             }
@@ -5662,18 +5792,36 @@
         );
       }
 
+      const HASH_TO_NAV = {
+        home: "home",
+        destinations: "destinations",
+        why: "why",
+        process: "admissions",
+        contact: "contact",
+      };
+
+      let navigationReady = false;
+
       function initNavigation() {
+        if (navigationReady) return;
+        navigationReady = true;
         document.addEventListener("click", (e) => {
           const link = e.target.closest("a[data-nav]");
           if (!link) return;
           e.preventDefault();
           navGo(link.getAttribute("data-nav"));
         });
+        window.addEventListener("hashchange", () => {
+          const sectionId = window.location.hash.replace(/^#/, "");
+          const navKey = HASH_TO_NAV[sectionId];
+          if (navKey) navGo(navKey);
+        });
         initNavScrollSpy();
       }
 
       function scrollTo(id) {
-        scrollToSection(id);
+        const sectionId = String(id).replace(/^#/, "");
+        scrollToSectionId(sectionId);
       }
 
       /* ===================== WELCOME MODAL ===================== */
@@ -5977,7 +6125,10 @@
           <div style="font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.75">${c.accommodation}</div>
         </div>
         <div class="living-card"><h4><i class="fa-solid fa-earth-asia"></i> Student Life</h4>
-          ${(c.studentLife && c.studentLife.length ? c.studentLife : (c.living || []).slice(3))
+          ${(c.studentLife && c.studentLife.length
+            ? c.studentLife
+            : (c.living || []).slice(3)
+          )
             .map(
               (l) =>
                 `<div class="living-item"><i class="fa-solid fa-circle"></i>${l}</div>`,
@@ -6234,6 +6385,8 @@
           }),
         200,
       );
+
+      bootSite();
     </script>
   </body>
 </html>
